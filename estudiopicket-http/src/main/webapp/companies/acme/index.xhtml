@@ -1,0 +1,13 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+        >
+<body>
+    Welcome to #{identity.account.partition.name}, <b>#{identity.account.loginName}</b> !
+
+    <p>
+        <h:form>
+            <h:commandButton id="logout" value="Log out" action="#{loginController.logout}"/>
+        </h:form>
+    </p>
+</body>
+</html>

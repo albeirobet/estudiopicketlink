@@ -1,0 +1,22 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<head>
+    <ui:fragment rendered="#{not identity.loggedIn}">
+        <meta http-equiv="Refresh" content="0; URL=#{facesContext.externalContext.requestContextPath}/home.jsf"/>
+    </ui:fragment>
+</head>
+
+<body>
+    <ui:fragment rendered="#{identity.loggedIn}">
+        Hey, you can only access resources from your company: <b>#{identity.account.partition.name}</b> !
+
+        <p>
+            <h:form>
+                <h:commandButton id="logout" value="Log out" action="#{loginController.logout}"/>
+            </h:form>
+        </p>
+    </ui:fragment>
+
+</body>
+</html>

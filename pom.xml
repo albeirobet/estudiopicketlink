@@ -197,5 +197,6 @@
 
 	<modules>
 		<module>estudiopicket-web</module>
+		<module>estudiopicket-http</module>
 	</modules>
 </project>
